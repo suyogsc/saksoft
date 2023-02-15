@@ -40,7 +40,6 @@ public class CustomerAPIController {
 		try {
 			Customer customer = customerService.get(id);
 			System.out.println(customer.toString());
-			//return new ResponseEntity<Customer>(customer, HttpStatus.OK);
 			return ResponseEntity.ok(customer);
 		} catch (NoSuchElementException e) {
 			return  ResponseEntity.ok("Record not found.");
